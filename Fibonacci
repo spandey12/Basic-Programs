@@ -1,0 +1,38 @@
+num = int(input('Enter a number N\n'))
+x = int(input('Enter 1 if you want to print first N numbers, OR enter 2 if you want to print till the Nth number\n '))
+
+n1,n2 = 0,1
+count = 2
+n3=0
+if x==1:
+    if num<=0:
+        print('please enter a positive number\n')
+    elif num==1:
+        print('Fibonacci sequence for ',num,' term is')
+        print(n1)
+    elif num ==2:
+         print('Fibonacci sequence for ',num,' term is')
+         print(n1,' ',n2)
+    else:
+        print('Fibonacci sequence for ',num,' terms is \n')
+        print(n1,' ',n2,' ')
+        while count<=num:
+            n3 = n1+n2
+            n1 = n2
+            n2 = n3
+            count=count+1
+            print(n3,' ')
+        
+if x==2:
+    if num<=0:
+        print('please enter a positive number\n')
+    else:
+        print("Fibonacci sequence upto",num,":")
+        print(n1,' ',n2,' ')
+        while n3<num:
+            n3 = n1+n2
+            n1 = n2
+            n2 = n3
+            print(n3,' ')
+            
+        
